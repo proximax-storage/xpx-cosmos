@@ -21,13 +21,13 @@ import (
 )
 
 const (
-	appName = "NemCosmos"
+	appName = "XpxCosmos"
 )
 
 // default home directories for expected binaries
 var (
-	DefaultCLIHome  = os.ExpandEnv("$HOME/.nem-cosmos-cli")
-	DefaultNodeHome = os.ExpandEnv("$HOME/.nem-cosmos-d")
+	DefaultCLIHome  = os.ExpandEnv("$HOME/.xpx-cosmos-cli")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.xpx-cosmos-d")
 )
 
 // Extended ABCI application
@@ -121,7 +121,7 @@ func MakeCodec() *codec.Codec {
 
 	// Register AppAccount
 	cdc.RegisterInterface((*auth.Account)(nil), nil)
-	cdc.RegisterConcrete(&types.AppAccount{}, "nem-cosmos/Account", nil)
+	cdc.RegisterConcrete(&types.AppAccount{}, "xpx-cosmos/Account", nil)
 
 	cdc.Seal()
 
